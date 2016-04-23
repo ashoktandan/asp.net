@@ -1,0 +1,30 @@
+html:
+<body>
+   <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+     <div>
+        <asp:DropDownList onchange="fun()" ID="DropDownList1" runat="server">
+            <asp:ListItem Value="1">one</asp:ListItem>
+            <asp:ListItem Value="2">two</asp:ListItem>
+            <asp:ListItem Value="3">three</asp:ListItem>
+        </asp:DropDownList>
+    </div>
+    </form>
+    <script>
+        function fun() {
+            var x = document.getElementById('DropDownList1').value;
+            PageMethods.ye(x, onsuccess);
+        }
+        function onsuccess(response) {
+            alert(response);
+        }
+       
+    </script>
+</body>
+
+c#:
+ [WebMethod]
+        public static string ye(string y)
+        {
+           return y+"ashok";
+        }
