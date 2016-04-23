@@ -1,0 +1,24 @@
+html:
+<body>
+   <form id="form1" runat="server">
+    <div>
+        <button onclick="fun()">click
+        </button>
+    </div>
+    </form>
+    <script>
+        function fun() {
+            alert('<%=xx%>');
+        }
+    </script>
+</body>
+
+c#:
+ public partial class WebForm1 : System.Web.UI.Page
+    {
+      public   string xx = "aaa";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
+       
+    }
